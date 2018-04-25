@@ -1,0 +1,24 @@
+#include<at89x52.h>
+#include<intrins.h>
+void Delay500ms();
+main()
+{
+  unsigned char data j;
+	while(1)
+	{
+		P1=0XFE;
+		for(j=8;j>0;j--)   //Ñ­»·×óÒÆ
+		{
+		  Delay500ms();
+			P1=_crol_(P1,1);     //_crol_  Ñ­»·£»
+		}
+	}
+}
+
+void Delay500ms()  //ÑÓÊ±1s
+{
+	unsigned char i,j,k;
+	for(i=200;i>0;i--)
+	for(j=20;j>0;j--)
+	for(k=250;k>0;k--);
+}

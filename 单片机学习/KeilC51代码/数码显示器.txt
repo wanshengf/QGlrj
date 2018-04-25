@@ -1,0 +1,33 @@
+#include<at89x52.h>
+#include<intrins.h>
+void Delay500ms();
+main()
+{
+	while(1)
+	{
+		P1=0XC0;
+		Delay500ms();
+		P1=0XF9;
+		Delay500ms();
+		P1=0XA4;
+		Delay500ms();
+		P1=0XB0;
+		Delay500ms();
+		P1=0X99;
+		Delay500ms();
+		P1=0X92;
+		Delay500ms();
+		P1=0X82;
+		Delay500ms();
+		P1=0XF8;
+		Delay500ms();
+	}
+}
+
+void Delay500ms()  //1s
+{
+	unsigned char i,j,k;
+	for(i=200;i>0;i--)
+	for(j=20;j>0;j--)
+	for(k=125;k>0;k--);
+}
